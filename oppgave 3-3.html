@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td></tr>
+        <tr><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td></tr>
+        <tr><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td><td onmouseover="changeStuff(this)" onmouseout="changeback(this)">o</td></tr>
+    </table>
+
+
+    <script>
+        function changeStuff(nyttVarde) {
+           nyttVarde.innerHTML = 'x';                     
+        }
+        function changeback(oldValue) {
+            oldValue.innerHTML = 'o';
+        }
+    </script>
+
+</body>
+</html>
