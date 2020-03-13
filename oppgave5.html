@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Oppgave 5</title>
+</head>
+<body>
+    <div id='a'></div>
+    <button onclick="opdtid()">Se vad klocken er nå</button>
+    <script>
+        document.getElementById('a').innerHTML = "Tiden når siden laddet var: " + new Date().toTimeString();
+        function opdtid() {
+            document.getElementById('a').innerHTML = "Tiden når du trykte på knappen var: " + new Date().toTimeString();
+        }
+    </script>
+</body>
+</html>
