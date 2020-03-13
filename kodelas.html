@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>    
+</head>
+<body>
+    <h1>PS! Koden er IKKE 3812</h1>
+    <h2><table>
+        <tr><td onclick="taNr(this)">1</td><td onclick="taNr(this)">2</td><td onclick="taNr(this)">3</td></tr>
+        <tr><td onclick="taNr(this)">4</td><td onclick="taNr(this)">5</td><td onclick="taNr(this)">6</td></tr>
+        <tr><td onclick="taNr(this)">7</td><td onclick="taNr(this)">8</td><td onclick="taNr(this)">9</td></tr>
+    </table></h2>
+    <div id="clickedOn"></div>
+    <button onclick="tryKode()">TRYCK!!</button>
+    <div id="rattKod"></div>
+    <script>
+        var thaNr = '';
+        var corrKode = '3812';
+        var nrCol = [];
+        var counter = 0;
+        var wCount = 0;
+        var combined = '';
+
+        function taNr(collectNr) {
+            nrCol[counter] = collectNr.innerHTML            
+            thaNr += collectNr.innerHTML;
+            counter++;
+            if (nrCol.length == 4) {
+            document.getElementById("clickedOn").innerHTML = nrCol[0] + "-" + nrCol[1] + "-" + nrCol[2] + "-" + nrCol[3];
+        }
+        }
+                
+
+        function tryKode() {
+            document.getElementById("rattKod").innerHTML = "kollar nr: " + thaNr;
+            if (thaNr.valueOf == corrKode.valueOf) document.getElementById("rattkod").innerHTML += " Det var rett";
+            
+        }
+    </script>
+</body>
+</html>
